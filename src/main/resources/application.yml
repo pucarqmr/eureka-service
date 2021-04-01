@@ -7,12 +7,14 @@ spring:
 
 eureka:
   instance:
-    prefer-ip-address: false
+    hostname: microservice.herokuapp.com
+    homePageUrl: https://${eureka.instance.hostName}/
+    home-page-url-path: https://${eureka.instance.hostName}
   client:
-    register-with-eureka: false
-    fetch-registry: false
     serviceUrl:
-      defaultZone: https://sgim-eureka-service.herokuapp.com/eureka/
+      defaultZone: http://eureka.herokuapp.com/eureka/
+      non-secure-port: 80
+      secure-port: 443
 
 #eureka:
 #  instance:
