@@ -13,6 +13,8 @@ eureka:
     fetch-registry: false
     service-url:
       defaultZone: ${EUREKA_URI:http://${eureka.instance.hostname}:${server.port}/eureka/}
+      eureka:
+  renewalPercentThreshold: 0.85
 
 #eureka:
 #  instance:
